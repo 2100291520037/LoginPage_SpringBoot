@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Success</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            margin-bottom: 10px;
+            color: #666;
+        }
+        .success-message {
+            font-weight: bold;
+            color: #4caf50;
+        }
+        .error-message {
+            font-weight: bold;
+            color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Success</h2>
+        <p th:text="'Authentication successful for email: ' + ${student.name}" class="success-message"></p>
+        <p th:text="'Authentication successful for percentage: ' + ${student.percentage}" class="success-message"></p>
+        <p th:text="'Authentication successful for branch: ' + ${student.branch}" class="success-message"></p>
+        <p th:text="${message}" class="error-message"></p>
+    </div>
+</body>
+</html>
